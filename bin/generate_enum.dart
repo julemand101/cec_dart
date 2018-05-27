@@ -22,10 +22,10 @@ main() {
     // Get content
     String content = subString.substring(subString.indexOf("{") + 1).replaceAll(new RegExp(r"//.*"), "");
 
-    File enumFile = new File("lib/src/cec_types/${name}.dart");
+    File enumFile = new File("lib/src/libcec_enum/${name}.dart");
     enumFile.writeAsStringSync(generate(name, content));
 
-    print('part "src/cec_types/$name.dart";');
+    print('part "src/libcec_enum/$name.dart";');
 
   } while (index1 != -1 || index1 >= input.length);
 }
