@@ -1,0 +1,47 @@
+part of cec_dart;
+
+enum CEC_logical_address {
+  CECDEVICE_UNKNOWN,
+  CECDEVICE_TV,
+  CECDEVICE_RECORDINGDEVICE1,
+  CECDEVICE_RECORDINGDEVICE2,
+  CECDEVICE_TUNER1,
+  CECDEVICE_PLAYBACKDEVICE1,
+  CECDEVICE_AUDIOSYSTEM,
+  CECDEVICE_TUNER2,
+  CECDEVICE_TUNER3,
+  CECDEVICE_PLAYBACKDEVICE2,
+  CECDEVICE_RECORDINGDEVICE3,
+  CECDEVICE_TUNER4,
+  CECDEVICE_PLAYBACKDEVICE3,
+  CECDEVICE_RESERVED1,
+  CECDEVICE_RESERVED2,
+  CECDEVICE_FREEUSE,
+  CECDEVICE_UNREGISTERED,
+  CECDEVICE_BROADCAST,
+}
+
+class _CEC_logical_address {
+  static Map<CEC_logical_address, int> toValue = {
+    CEC_logical_address.CECDEVICE_UNKNOWN: -1,
+    CEC_logical_address.CECDEVICE_TV: 0,
+    CEC_logical_address.CECDEVICE_RECORDINGDEVICE1: 1,
+    CEC_logical_address.CECDEVICE_RECORDINGDEVICE2: 2,
+    CEC_logical_address.CECDEVICE_TUNER1: 3,
+    CEC_logical_address.CECDEVICE_PLAYBACKDEVICE1: 4,
+    CEC_logical_address.CECDEVICE_AUDIOSYSTEM: 5,
+    CEC_logical_address.CECDEVICE_TUNER2: 6,
+    CEC_logical_address.CECDEVICE_TUNER3: 7,
+    CEC_logical_address.CECDEVICE_PLAYBACKDEVICE2: 8,
+    CEC_logical_address.CECDEVICE_RECORDINGDEVICE3: 9,
+    CEC_logical_address.CECDEVICE_TUNER4: 10,
+    CEC_logical_address.CECDEVICE_PLAYBACKDEVICE3: 11,
+    CEC_logical_address.CECDEVICE_RESERVED1: 12,
+    CEC_logical_address.CECDEVICE_RESERVED2: 13,
+    CEC_logical_address.CECDEVICE_FREEUSE: 14,
+    CEC_logical_address.CECDEVICE_UNREGISTERED: 15,
+    CEC_logical_address.CECDEVICE_BROADCAST: 15,
+  };
+  static Map<int, CEC_logical_address> toEnum =
+      new Map.fromIterables(toValue.values, toValue.keys);
+}
