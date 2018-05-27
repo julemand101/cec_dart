@@ -8,6 +8,7 @@ library cec_dart;
 
 import 'dart:async';
 import 'dart:isolate';
+import 'dart:typed_data';
 import 'dart-ext:cec_extension';
 
 // Generated enum types from cectypes.h
@@ -50,5 +51,17 @@ part "src/libcec_enum/CEC_vendor_id.dart";
 part "src/libcec_enum/CEC_adapter_type.dart";
 part "src/libcec_enum/LibCEC_alert.dart";
 part "src/libcec_enum/LibCEC_parameter_type.dart";
+
+// Libcec struct types
+part "src/libcec_types/CEC_log_message.dart";
+part "src/libcec_types/CEC_keypress.dart";
+part "src/libcec_types/CEC_adapter.dart";
+part "src/libcec_types/CEC_adapter_descriptor.dart";
+part "src/libcec_types/CEC_datapacket.dart";
+part "src/libcec_types/CEC_command.dart";
+
+class LibCECException extends Exception {
+  factory LibCECException([var message]) => new Exception(message);
+}
 
 // TODO: Export any libraries intended for clients of this package.
